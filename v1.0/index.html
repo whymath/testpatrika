@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>OBP Newsletter</title>
+  <script src="scripts/query.min.js"></script>
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-route.js"></script>
+  <script src="scripts/OBPcontroller.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/definition.css"/>
+
+</head>
+
+<body ng-app="Newsletter">
+  <div style="background-color: #80e5ff;" id="header" class="clear">
+    <h1><img src="img/Newsletter.png"></h1>
+  </div>
+  <div class="clear">
+  <ul ng-controller="listSelect">
+    <li ng-repeat="item in menu" ng-click="select($index)" ng-class="{active: $index == selected}">
+      <a href="#{{item.name}}">{{item.name}}</a>
+    </li>
+    <li style="float:right"><a href="/home/signup">Sign Up</a></li>
+  </ul>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <div class="ngviewback" ng-view></div>
+</body>
+</html>
