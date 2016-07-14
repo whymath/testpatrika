@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Student Registration Form</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="scripts/angular.js"></script>
+  <script src="scripts/controllers.js"></script>
+  <script src="scripts/angular-route.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+  <div ng-controller="myCtrl">
+
+    <h1>Student Registration System</h1>
+
+    <form novalidate class="Form" ng-controller="myCtrl">
+        Registration Number:<input type="text" ng-model="regno"/><br/>
+        First Name:<input type="text" ng-model="fname"/><br/>
+        Last Name:<input type="text" ng-model="lname"/><br/>
+        Course:<select ng-model="selectedCourse" ng-options="x for x in names">
+          </select><br/>
+        Year of Study:<select ng-model="yearOfStudy" ng-options="x for x in years" >
+          </select><br/>
+        Date Of Birth: <input type="text" ng-model="user.dob"/><br/>
+        Gender: <input type="radio" ng-model="user.gender" value="male" />male
+        <input type="radio" ng-model="user.gender" value="female" />female<br/>
+        <input type="submit" value="Submit" /><br/>
+
+		<p>Class Roll No:{{selectedCourse+yearOfStudy+regno}}</p>
+    </form>
+
+
+    </div>
+
+    <script>
+    var myApp = angular.module('formExample',[]);
+
+    myApp.controller('formController',['$scope',function($scope){
+      $scope.yearOfStudy="";
+      $scope.regno="";
+      $scope.selectedCourse="";
+      $scope.rollno="000";
+    }]);
+    </script>
+
+</body>
+
+</html>

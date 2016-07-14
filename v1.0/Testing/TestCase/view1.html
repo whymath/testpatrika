@@ -1,0 +1,12 @@
+HELLO FROM VIEW 1:
+
+<br />
+<br /> Running through items in the view::
+<br />
+
+    Name :
+    <br />
+    <input type="text" data-ng-model="name" />{{ name }}
+    <ul>
+      <li data-ng-repeat="cust in customers | filter:name | orderBy:city">{{ cust.name + ' ' + cust.city}}</li>
+    </ul>
