@@ -1,0 +1,12 @@
+{ _id: ObjectID { _bsontype: 'ObjectID', id: 'Wü\u001b3Ú\\oÙM' },
+  article_id: 'art00001',
+  title: 'Discipline in Software Development',
+  author: 'Lilly Desai',
+  category: 'Features',
+  upload_date: Mon Jul 25 2016 17:16:35 GMT+0530 (India Standard Time),
+  body_text: 
+   { subhead1: 'Lack of indentation',
+     para1: 'We all are quite aware of the fact that formatted code makes it easier for other people to understand and maintain your code, simplifying incremental development too. But do we really care? While in some cases the indentation is inconsistent, in some it is totally missed out. Additionally, there are always large chunks of code which is left commented out. Programmers in a hurry often manage to circumvent the IDE’s insistence on proper indentation, saving the cleanup activity for the last, but unfortunately, few ever return.',
+     subhead2: 'Typos in the code',
+     para2: 'This is surprisingly common, and actually has nothing to do with the programming skill of the developer. While proper spellings and grammar is generally mandated on components seen by end-users, like labels, prompts, error messages, etc, text that composes the code and isn\'t seen by anyone other than fellow programmers are generally ignored in terms of linguistic accuracy. We might ask ourselves, since the compiler will detect any showstopper errors, should I really bother going any further than that. What we do not realize is that a misspelled variable name could wreak havoc on your code or alter the significance of the variable totally. Searching for misspelled classes, variables or methods often end up being a time-consuming and frustrating activity. On a humorous note, I would like to mention an instance of a file search which took me long for the simple reason that adapter was misspelled as adatper.' },
+  tags: [ 'Features', 'Best Practices' ] }
