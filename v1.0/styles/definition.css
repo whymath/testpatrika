@@ -4,9 +4,10 @@ body {
 }
 
 h1 {
-  padding: 0%;
+  padding: 0;
   top: 0;
-  background-color: azure-blue;
+  background-color: white;
+  margin: 0;
 }
 
 ul {
@@ -14,7 +15,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #ffcc99;
+  background-color: #e6ac00;
   position: fixed;
   width: 100%;
 }
