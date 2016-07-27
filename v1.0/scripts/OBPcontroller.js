@@ -41,3 +41,13 @@ app.config(['$routeProvider',function($routeProvider){
   })
   .otherwise({redirectTo:'/'});
 }]);
+
+
+app.controller('ExtractDataFromArticle', function($scope, $http){
+  $http.get('data/discipline.json').success(function(data){
+    $scope.articles = data;
+  })
+  .error(function(data, status){
+    console.error('failure loading the article record');;
+  });
+});
