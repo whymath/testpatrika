@@ -6,12 +6,19 @@
     <script src="scripts/query.min.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-route.js"></script>
-    <script src="scripts/OBPcontroller.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/definition.css"/>
+    <script src="scripts/articleApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/article.css"/>
   </head>
 
-  <body>
-    <div ng-app="article" ng-controller="articleController">
-
-  <body>
+  <body ng-app="articleApp">
+    <div id="ArticleContainer">
+      <div id="returnHome">
+        <button id="goToHomePage">Back Home</button>
+      </div>
+      <div id="ArticleHeaderBar" ng-controller="ArticleCtrl">
+        <h1>{{article.title}}</h1>
+      </div>
+      <div
+    </div>
+  </body>
 </html>
