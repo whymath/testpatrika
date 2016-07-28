@@ -14,7 +14,7 @@
 <body ng-app="Newsletter">
   <div id="container">
     <div id="namePlate">
-      <div id="header" class="clear">
+      <div id="header">
         <h1><img src="img/Newsletter.png"></h1>
       </div>
     </div>
@@ -26,14 +26,10 @@
       <li style="float:right"><a href="/home/signup">Sign Up</a></li>
       </ul>
     </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div id="output">
+    <div class="output">
       <div class="ngviewback" ng-view></div>
     </div>
-    <div ng-controller="ExtractDataFromArticle">
+    <div class="output" ng-controller="ExtractDataFromArticle">
       <table border="1">
 				<tr>
 					  <th>Article</th>
