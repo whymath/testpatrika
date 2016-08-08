@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="OBPController">
+  <head>
+    <title>OBPNews1.1</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/OBPController.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/definition.css"/>
+  </head>
+
+  <body >
+    <div>
+      <div class="header">
+        <img class="headerimg" src="img/Newsletter.png"/>
+      </div>
+      <div name="menu" ng-controller="listController as list" >
+        <ul class="nav nav-pills" >
+          <li ng-class="{active:list.isSelected(item.index)}"
+              ng-repeat="item in list.menus">
+              <a data-toggle="pills"
+                  href="#{{item.name}}"
+                  ng-click="list.selectTab({{item.index}})">
+                {{item.name}}
+              </a>
+          </li>
+        </ul>
+      </div class="list"
+            ng-repeat="item in list.menus"
+            ng-show="list.isSelected({{item.index}})">
+            {{item.File}}
+      </div>
+    </div>
+  </body>
+
+</html>

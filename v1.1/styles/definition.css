@@ -1,0 +1,25 @@
+.bodyrelative{
+  padding: 10px;
+  position: relative;
+  width: 1020px;
+  background: #efefef;
+  border: 1px #ccc;
+  margin: 10px auto;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: #ff3300;
+  padding: 0;
+  margin: 0;
+  border: none;
+  height: 100px;
+}
+
+.headerimg {
+  margin-top: 5px;
+  margin-left: 50%;
+}
