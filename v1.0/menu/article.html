@@ -1,24 +1,77 @@
 <!doctype html>
-<html>
+<html ng-app="articleApp">
   <head>
     <meta charset="utf-8" />
     <title>OBP Newsletter</title>
-    <script src="scripts/query.min.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-route.js"></script>
     <script src="scripts/articleApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="styles/article.css"/>
   </head>
 
-  <body ng-app="articleApp">
-    <div id="ArticleContainer">
-      <div id="returnHome">
-        <button id="goToHomePage">Back Home</button>
+  <body ng-controller="articleController as artController">
+    <div class="relative">
+      <div id="header">
+          <h1>{{artController.articles.articleTitle}}</h1>
       </div>
-      <div id="ArticleHeaderBar" ng-controller="ArticleCtrl">
-        <h1>{{article.title}}</h1>
+      <div id="subheader">
+        <ul class="lists">
+            <li>{{artController.articles.articleAuthor}},</li>
+            <li>{{artController.articles.articleDate}}</li>
+        </ul>
       </div>
-      <div
+      <section ng-controller="PanelController as panel">
+        <ul class="nav nav-pills">
+          <li ng-class="{active:panel.isSelected(1)}">
+            <a href ng-click="panel.selectTab(1)">Article</a>
+          </li>
+          <li ng-class="{active:panel.isSelected(2)}">
+            <a href ng-click="panel.selectTab(2)">Images</a>
+          </li>
+          <li ng-class="{active:panel.isSelected(3)}">
+            <a href ng-click="panel.selectTab(3)">About Author</a>
+          </li>
+          <li ng-class="{active:panel.isSelected(4)}">
+            <a href ng-click="panel.selectTab(4)">Reviews</a>
+          </li>
+        </ul>
+        <div class="panel" ng-show="panel.isSelected(1)">
+          <h4>Article</h4>
+          <p>{{artController.articles.description}}</p>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(2)">
+          <h4>Images</h4>
+          <p>{{artController.articles}}</p>
+          <ul ng-repeat="image in artController.articles.images">
+            <li><img ng-src="{{image}}"/></li>
+          </ul>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(4)">
+          <h4>Reviews</h4>
+          <form name="reviewForm" ng-controller="reviewController as reviewCtrl"
+          ng-submit="reviewForm.$valid && reviewCtrl.addReview(articleReview)" novalidate>
+            <blockquote>
+              <b>Stars: {{reviewCtrl.review.stars}}</b>
+              {{reviewCtrl.review.body}}
+              <cite>by: {{reviewCtrl.review.author}} on  {{reviewCtrl.review.createdOn | date}}</cite>
+            </blockquote>
+            <select ng-model="reviewCtrl.review.stars" required>
+              <option value="0">No rating</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <textarea ng-model="reviewCtrl.review.body" required></textarea>
+            <label>by:</label>
+            <input ng-model="reviewCtrl.review.author" type="email" required/>
+            <div>Review Form is {{reviewForm.$valid}}</div>
+            <input type="submit" value="Submit"/>
+          </form>
+        </div>
+      </section>
     </div>
   </body>
 </html>

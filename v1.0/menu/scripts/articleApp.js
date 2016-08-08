@@ -1,24 +1,45 @@
-//creating an application module
 var ArticleAppModule = angular.module("articleApp", []);
 
-//The below code will read the data from student.json file and will pass to the $scope variable
-ArticleAppModule.controller("ArticleCtrl", function($scope, $http){
-			$http.get('data/article.json') //reading the student.json file
+ArticleAppModule.controller('reviewController',function(){
+	this.review = {};
 
-				.success (function(data){
-						$scope.article = data; // binding the data to the $scope variable
-					})
-				.error(function(data, status) {
-  						console.error('failure loading the article record', status, data);
-  						$scope.students = { }; //return blank record if something goes wrong
-				});
+	this.addReview = function(product){
+		this.review.createdOn = Date.now();
+		product.reviews.push(this.review);
+		this.review = {};
+	}
+});
 
-				//calculate the total marks of all the students
-				 $scope.getTotalMarks = function(key) {
-				        			var total = 0;
-				        			angular.forEach($scope.students, function(record) {
-				            		total += record[key];
-				        		});
-				        		return total;
-    						};//end function getTotalMarks
-	});//end controller
+ArticleAppModule.controller('articleController',function(){
+	this.articles = article;
+});
+
+ArticleAppModule.controller('PanelController',function(){
+	this.tab = 1;
+
+	this.selectTab = function(setTab){
+		this.tab = setTab;
+	};
+
+	this.isSelected = function(checkTab){
+		return this.tab === checkTab;
+	};
+});
+
+var article = {
+	articleId: '20',
+	articleTitle: 'Creation of the Article Page',
+	articleAuthor: 'Sourajyoti Bose',
+	articleDate: '19-Apr-2016',
+	description: 'The article I wrote was over here. But mucho gracias. Lorem Ipsum My Ass.',
+	articleImages: [
+		{
+			image1: '/menu/img/chipmunk.jpg',
+			image2: '/menu/img/chipmunk1.jpg'
+		}
+	]
+}
+
+var reviews = {
+
+}
