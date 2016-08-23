@@ -1,4 +1,11 @@
-var ArticleAppModule = angular.module("articleApp", []);
+var ArticleAppModule = angular.module("articleApp", ['ngMaterial']);
+
+ArticleAppModule.controller('AppCtrl', function($scope) {
+		$scope.imagePath = 'img/chipmunk.png';
+	})
+	.config(function($mdThemingProvider) {
+		$mdThemingProvider.theme('white').backgroundPalette('white').dark();
+	});
 
 ArticleAppModule.controller('reviewController',function(){
 	this.review = {};

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Article</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/articleAppController.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/article.css"/>
+  </head>
+
+  <body ng-app="articleApp">
+    <div class="relative" ng-controller="articleAppController as ArtControl">
+     <div id="header">
+      <h1>{{ArtControl.articles.title}}</h1>
+     </div>
+     <div id="subheader">
+       <ul class="lists">
+           <li>{{ArtControl.articles.author}},</li>
+           <li>{{ArtControl.articles.date}}</li>
+       </ul>
+     </div>
+     <div class="sidebar">
+      <img class="ib" src="img/chipmunk.jpg"/>
+      <img class="ib" src="img/dalmatian.jpg"/>
+     </div>
+     <div id="content">
+      <h2>{{ArtControl.articles.heading}}</h2>
+      <p>{{ArtControl.articles.description}}</p>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.
+         Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      <p>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue.</p>
+      <p>Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+     </div>
+     <br class="clearfloat" />
+     <hr class="line"></hr>
+     <div>
+       <hr class="line"></hr>
+     </div>
+    </div>
+  </body>
+</html>
