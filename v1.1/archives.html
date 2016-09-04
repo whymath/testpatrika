@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Article</title>
+  <script src="scripts/ArchivesController.js"></script>
+</head>
+
+<body ng-app="Archives">
+<div ng-controller="archivesController">
+  <form name="ArchivesForm">
+    <div>
+      <label for="repeatSelect">Search</label><br><br>
+      <select name="Search" ng-model="searchOptions.model">
+        <option ng-repeat="option in searchOptions.searchOptionsList" value="{{option.name}}">{{option.name}}</option>
+      </select>
+      <br><br>
+      <div name="ByNewsLetterOptionsDiv" ng-show="searchOptions.model=='NewsLetter'">
+        <label for="ByNewsLetter">By</label><br><br>
+        <select name="byNewsLetter" ng-model="byNewsLetterOptions.model">
+          <option ng-repeat="option in byNewsLetterOptions.byNewsLetterOptionsList" value="{{option.name}}">{{option.name}}</option>
+        </select>
+        <br><br>
+      </div>
+      <div name="ByNewsLetterOptionsDiv" ng-show="searchOptions.model=='Author'">
+        <label for="repeatSelect">By</label><br><br>
+        <select name="repeatSelect" ng-model="byAuthorOptions.model">
+          <option ng-repeat="option in byAuthorOptions.byAuthorOptionsList" value="{{option.name}}">{{option.name}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+</html>
