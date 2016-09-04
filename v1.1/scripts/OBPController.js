@@ -48,20 +48,26 @@ var menuItems= [
   {name: 'Sign In', index:'5'}
 ];
 
-var searchOptionsList = [
-  {id: '1', name: 'NewsLetter'},
-  {id: '2', name: 'Author'},
-  {id: '3', name: 'Media'}
-];
-
-var byNewsLetterOptionsList= [
-  {id: '1', name: 'Month'},
-  {id: '2', name: 'Year'}
-];
-
-var byAuthorOptionsList= [
-  {id: '1', name: 'Author'},
-  {id: '2', name: 'Date'},
-  {id: '3', name: 'Tags'},
-  {id: '4', name: 'Titles'}
-];
+OBPControllerApp.controller('archivesController', ['$scope', function($scope) {
+  $scope.searchOptions = {
+   model: null,
+   searchOptionsList: [
+     {id: '1', name: 'NewsLetter'},
+     {id: '2', name: 'Author'},
+     {id: '3', name: 'Media'}
+   ]};
+ $scope.byNewsLetterOptions ={
+   model: null,
+   byNewsLetterOptionsList: [
+      {id: '1', name: 'Month'},
+      {id: '2', name: 'Year'}
+   ]};
+ $scope.byAuthorOptions = {
+    model: null,
+    byAuthorOptionsList: [
+     {id: '1', name: 'Author'},
+     {id: '2', name: 'Date'},
+     {id: '3', name: 'Tags'},
+     {id: '4', name: 'Titles'}
+   ]};
+}]);
