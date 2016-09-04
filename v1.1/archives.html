@@ -21,12 +21,19 @@
           <option ng-repeat="option in byNewsLetterOptions.byNewsLetterOptionsList" value="{{option.name}}">{{option.name}}</option>
         </select>
         <br><br>
+        <div name="GoButton" ng-show="byNewsLetterOptions.model != null"> 
+          <button>Go</button>
+        </div>
       </div>
       <div name="ByNewsLetterOptionsDiv" ng-show="searchOptions.model=='Author'">
         <label for="repeatSelect">By</label><br><br>
         <select name="repeatSelect" ng-model="byAuthorOptions.model">
           <option ng-repeat="option in byAuthorOptions.byAuthorOptionsList" value="{{option.name}}">{{option.name}}</option>
         </select>
+        <br><br>
+        <div name="GoButton" ng-show="byAuthorOptions.model != null">
+          <button>Go</button>
+        </div>
       </div>
     </div>
   </form>
