@@ -1,6 +1,7 @@
 <html lang="en" >
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
@@ -18,16 +19,17 @@
   <md-content class="md-padding" layout-xs="column" layout="row">
     <div flex-xs flex-gt-xs="30" layout="column">
       <md-card>
-        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out" ng-click="showAdvanced($event)">
+        </img>
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -35,13 +37,13 @@
         <img ng-src="{{imagePathDog}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -49,13 +51,13 @@
         <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -65,13 +67,13 @@
         <img ng-src="{{image1}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -79,13 +81,13 @@
         <img ng-src="{{image2}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -93,13 +95,13 @@
         <img ng-src="{{image3}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -109,13 +111,13 @@
         <img ng-src="{{image4}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -123,13 +125,13 @@
         <img ng-src="{{image5}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -137,13 +139,13 @@
         <img ng-src="{{image6}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -153,13 +155,13 @@
         <img ng-src="{{image7}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -167,13 +169,13 @@
         <img ng-src="{{image8}}" class="md-card-image" alt="Washed Out">
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
@@ -182,13 +184,13 @@
         </img>
         <md-card-actions layout="row" layout-align="end center">
           <md-button class="md-icon-button" aria-label="Favorite">
-            <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Settings">
-            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
           </md-button>
           <md-button class="md-icon-button" aria-label="Share">
-            <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
           </md-button>
         </md-card-actions>
       </md-card>
