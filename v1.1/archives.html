@@ -6,36 +6,48 @@
   <script src="scripts/OBPController.js"></script>
 </head>
 
-<body ng-app="Archives">
-<div ng-controller="archivesController">
-  <form name="ArchivesForm">
-    <div>
-      <label for="repeatSelect">Search</label><br><br>
-      <select name="Search" ng-model="searchOptions.model">
-        <option ng-repeat="option in searchOptions.searchOptionsList" value="{{option.name}}">{{option.name}}</option>
-      </select>
-      <br><br>
-      <div name="ByNewsLetterOptionsDiv" ng-show="searchOptions.model=='NewsLetter'">
-        <label for="ByNewsLetter">By</label><br><br>
-        <select name="byNewsLetter" ng-model="byNewsLetterOptions.model">
-          <option ng-repeat="option in byNewsLetterOptions.byNewsLetterOptionsList" value="{{option.name}}">{{option.name}}</option>
-        </select>
-        <br><br>
-        <div name="GoButton" ng-show="byNewsLetterOptions.model != null"> 
-          <button>Go</button>
-        </div>
+<body>
+  <div class="md-menu-demo menudemoMenuPositionModes" ng-controller="ArchivesController as ctrl" ng-cloak="" style="min-height:350px;" ng-app="MyApp">
+  <div class="menu-demo-container" layout-align="start center" layout="column">
+    <div layout-align="start center" layout="column" style="min-height:50px;">
+      <h2 class="md-title">Search NewsLetters</h2>
+    </div>
+    <div class="menus" layout-wrap="" layout="column" layout-fill="" layout-align="space-between center" style="min-height:200px;">
+      <div layout="column" flex-xs="100" flex-sm="100" flex="33" layout-align="center">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Search</label>
+            <md-select ng-model="searchOptions.model">
+              <md-option ng-repeat="item in searchOptions.searchOptionsList" value="{{item.name}}">
+                {{item.name}}
+              </md-option>
+            </md-select>
+        </md-input-container>
       </div>
-      <div name="ByNewsLetterOptionsDiv" ng-show="searchOptions.model=='Author'">
-        <label for="repeatSelect">By</label><br><br>
-        <select name="repeatSelect" ng-model="byAuthorOptions.model">
-          <option ng-repeat="option in byAuthorOptions.byAuthorOptionsList" value="{{option.name}}">{{option.name}}</option>
-        </select>
-        <br><br>
-        <div name="GoButton" ng-show="byAuthorOptions.model != null">
-          <button>Go</button>
-        </div>
+      <div layout="column" flex-xs="100" flex-sm="100" flex="33" layout-align="center" ng-show="searchOptions.model=='NewsLetter'">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>By</label>
+            <md-select ng-model="byNewsLetterOptions.model">
+              <md-option ng-repeat="item in byNewsLetterOptions.byNewsLetterOptionsList" value="{{item.name}}">
+                {{item.name}}
+              </md-option>
+            </md-select>
+        </md-input-container>
+      </div>
+      <div layout="column" flex-xs="100" flex-sm="100" flex="33" layout-align="center" ng-show="searchOptions.model=='Author'">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>By</label>
+            <md-select ng-model="byAuthorOptions.model">
+              <md-option ng-repeat="item in byAuthorOptions.byAuthorOptionsList" value="{{item.name}}">
+                {{item.name}}
+              </md-option>
+            </md-select>
+        </md-input-container>
+      </div>
+      <div layout="column" flex-xs="100" flex-sm="100" flex="33" layout-align="center">
+        <md-button class="md-raised md-primary" ng-show="byAuthorOptions.model!=null || byNewsLetterOptions.model!=null">Go</md-button>
       </div>
     </div>
-  </form>
-</div>
+    </div>
+  </div>
+</body>
 </html>
