@@ -1,0 +1,38 @@
+.bodyrelative{
+  padding: 10px;
+  position: relative;
+  width: 1050px;
+  background: #efefef;
+  border: 1px solid #ccc;
+  margin: 5px auto;
+}
+
+body {
+  margin: 0;
+  background: #efefef;
+}
+
+.header {
+  background: #efefef;
+  padding: 0;
+  margin: 0;
+  border: none;
+  height: 70px;
+}
+
+.headerimg {
+  margin-top: 5px;
+  margin-left: 48%;
+}
+
+.menuUnderLine{
+  color: #333;
+  background-color: #333;
+  height: 5px;
+}
+
+.nav-pills > li > a {
+  margin-bottom: -15px;
+  padding-bottom: 2px;
+
+}

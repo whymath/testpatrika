@@ -1,0 +1,44 @@
+<md-dialog aria-label="Mango (Fruit)" ng-app="OBPController" ng-controller="AppCtrl">
+  <form ng-cloak>
+    <div layout="column">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{article.title}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/cancel.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content" layout="column">
+        <div>
+          <h2>{{article.heading}}</h2>
+        </div>
+        <div layout="row">
+          <div flex=60>
+            <p>{{article.contents}}</p>
+          </div>
+          <div flex=40 layout="column">
+            <img style="margin: auto; max-width: 100%;" alt="Dog" src="{{article.imagePath}}" border="1">
+            <img style="margin: auto; max-width: 100%;" alt="Dog" src="{{article.image1}}" border="1">
+          <div>
+        </div>
+      </div>
+    </md-dialog-content>
+  </div>
+  <md-dialog-actions layout="row">
+    <md-button href="http://en.wikipedia.org/wiki/Real_Madrid_C.F." target="_blank" md-autofocus>
+      More on Wikipedia
+    </md-button>
+    <span flex></span>
+    <md-button ng-click="answer('not useful')">
+     <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+    </md-button>
+    <md-button ng-click="answer('useful')">
+      <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+    </md-button>
+  </md-dialog-actions>
+  </form>
+</md-dialog>

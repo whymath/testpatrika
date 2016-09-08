@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/OBPController.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/definition.css"/>
+  </head>
+
+  <body ng-app="OBPController">
+    <div ng-controller="ContactCtrl" layout="column" ng-cloak="" class="md-inline-form inputdemoBasicUsage" >
+
+    <md-content layout="row" layout-gt-sm="row" layout-padding="">
+      <div flex=60>
+        <h2>FeedBack, Queries</h2>
+      </div>
+      <div flex=5></div>
+      <div flex=35>
+        <h3>You can also Contact us at..</h3>
+      </div>
+      <hr/>
+    </md-content>
+
+    <md-content layout-padding="" layout="row">
+      <div flex=60>
+        <form name="userForm">
+          <div layout-gt-sm="column" layout="column">
+            <md-input-container class="md-block" flex-gt-sm="">
+              <label>First name</label>
+              <input name="firstName" ng-model="user.firstName" placeholder="Anonymous" required md-maxlength="40">
+
+              <div ng-messages="userForm.firstName.$error" role="alert" multiple>
+                <div ng-message="required">You can simply use "Anonymous"</div>
+                <div ng-message="md-maxlength">Well you weren't given a chance at birth.<span>Sorry!</span></div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block" flex-gt-sm="">
+              <label>Last Name</label>
+              <input ng-model="theMax">
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Location</label>
+              <md-select ng-model="user.state">
+                <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                  {{state.abbrev}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>FeedBack</label>
+              <textarea name="feedBack" ng-model="user.biography" placeholder="Comment.."
+              md-maxlength="300" rows="8" md-select-on-focus="" required=""></textarea>
+              <div ng-messages="userForm.feedBack.$error" role="alert" multiple>
+                <div ng-message="required">You have it in you to write a small amount. It would make you feel better. Trust us!</div>
+                <div ng-message="md-maxlength">Whoa! Not that much. We are not paid for it! Stop Blubbing!</div>
+              </div>
+            </md-input-container>
+
+            <md-datepicker ng-model="user.submissionDate"></md-datepicker>
+
+            <md-button ng-disabled="user.biography == null" class="md-raised md-primary">Submit</md-button>
+          </div>
+        </form>
+      </div>
+      <div flex=5></div>
+      <div flex=35>
+
+      </div>
+    </md-content>
+
+  </div>
+  </body>
+</html>

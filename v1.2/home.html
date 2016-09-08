@@ -1,0 +1,204 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+  <!-- User Defined Scripts -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css" type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
+  <script src="scripts/OBPController.js"></script>
+
+</head>
+<body ng-app="OBPController" ng-cloak>
+  <div ng-controller="AppCtrl" ng-cloak >
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="30" layout="column">
+      <md-card>
+        <img ng-src="{{articles.imagePath}}" class="md-card-image" alt="Washed Out" ng-click="showAdvanced($event)">
+        </img>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{imagePathDog}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="30" layout="column">
+      <md-card>
+        <img ng-src="{{image1}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{image2}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{image3}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="30" layout="column">
+      <md-card>
+        <img ng-src="{{image4}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{image5}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{image6}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="30" layout="column">
+      <md-card>
+        <img ng-src="{{image7}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{image8}}" class="md-card-image" alt="Washed Out">
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <img ng-src="{{image9}}" class="md-card-image" alt="Washed Out">
+        </img>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <md-icon md-svg-icon="img/icons/like.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Settings">
+            <md-icon md-svg-icon="img/icons/comment.svg"></md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <md-icon md-svg-icon="img/icons/share.svg"></md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </md-content>
+  <!--<div layout layout-padding layout-align="center end" style="height:300px">
+    <md-checkbox ng-model="showDarkTheme">Use 'Dark' Themed Cards</md-checkbox>
+  </div> -->
+</div>
+</body>
+</html>
