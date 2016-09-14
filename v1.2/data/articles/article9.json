@@ -1,0 +1,19 @@
+{
+  "articleId": "OR009",
+  "title": "Article9",
+  "author": "Automation Motion",
+  "category": [],
+  "uploadDate": "",
+  "publishDate": "",
+  "images": ["img/Image2.png","img/Image6.png"],
+  "tags": [],
+  "likes": "",
+  "comments": [],
+  "createdOn": "",
+  "createdBy": "",
+  "updatedOn": "14-Sep-2016",
+  "updatedBy": "Yohan",
+  "versionNumber": "1.0",
+  "thumbnailImage": "img/Image6.png",
+  "bodyText": ""
+}
