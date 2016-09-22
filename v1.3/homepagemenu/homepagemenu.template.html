@@ -1,0 +1,9 @@
+<ul class="nav nav-pills nav-justified" ng-init="list.tab=1">
+  <li ng-repeat="item in $ctrl.menuItems">
+    <a data-toggle="pills"
+        href="#/{{item.link}}"
+        ng-click="list.tab = item.index">
+      {{item.name}}
+    </a>
+    </li>
+</ul>

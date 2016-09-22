@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="newsletterApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css" type="text/css"/>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="header/pageheader.module.js"></script>
+    <script src="header/pageheader.component.js"></script>
+    <script src="homepagemenu/homepagemenu.module.js"></script>
+    <script src="homepagemenu/homepagemenu.component.js"></script>
+    <script src="article-list/article-list.module.js"></script>
+    <script src="article-list/article-list.component.js"></script>
+  </head>
+
+  <body>
+    <header></header>
+    <div layout="row">
+      <div flex="10"></div>
+      <div flex="80">
+        <home-page-menu></home-page-menu>
+        <md-divider></md-divider>
+        <!-- Use a custom component to render a list of articles -->
+        <article-list></article-list>
+      </div>
+      <div flex="10"></div>
+    </div>
+  </body>
+</html>
