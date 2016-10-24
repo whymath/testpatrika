@@ -1,8 +1,10 @@
 'use strict';
 
-angular.module('newsletterApp',[
+angular.module('newsLetterApp',[
+  'ngAnimate',
   'ngMaterial',
-  'header',
-  'homePageMenu',
-  'articleList'
+  'ngComponentRouter'
+  'ngRoute',
+  'articleList',
+  'articleDetail'
 ]);
