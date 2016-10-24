@@ -1,7 +1,46 @@
-<p>Total Number of articles:{{$ctrl.articles.length}}</p>
-<ul>
-<li ng-repeat="article in $ctrl.articles">
-  <span>{{article.name}}</span>
-  <p>{{article.snippet}}</p>
-</li>
-</ul>
+<div layout="row">
+  <div flex="10">
+  </div>
+  <div flex="80">
+    <div>
+      <!--Body content-->
+      <ul class="articles">
+        <md-content class="md-padding" layout-xs="column" layout="column">
+          <div flex-gt-xs="50" layout="row" layout-xs="column" layout-wrap>
+            <li ng-repeat="article in $ctrl.articles">
+            <md-card md-theme-watch>
+              <md-card-title>
+                <md-card-title-text>
+                  <a href="#!/phones/{{article.id}}">
+                    <span class="md-headline">{{article.name}}</span>
+                  </a>
+                  <span class="md-subhead width:10px word-wrap:break-word">{{article.snippet}}</span>
+                </md-card-title-text>
+                <md-card-title-media>
+                  <div class="md-media-lg card-media">
+                    <!-- <img ng-src="{{article.imageUrl}}" alt="{{article.name}}" /> -->
+                  </div>
+                </md-card-title-media>
+              </md-card-title>
+            </a>
+              <md-card-actions layout="row" layout-align="end center">
+                <md-button class="md-icon-button" aria-label="Favorite">
+                  <md-icon md-svg-icon="img/icons/favorite.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Settings">
+                  <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                </md-button>
+                <md-button class="md-icon-button" aria-label="Share">
+                  <md-icon md-svg-icon="img/icons/share-arrow.svg"></md-icon>
+                </md-button>
+              </md-card-actions>
+            </md-card>
+          </li>
+        </div>
+      </md-content>
+      </ul>
+    </div>
+  </div>
+  <div flex="10">
+  </div>
+</div>

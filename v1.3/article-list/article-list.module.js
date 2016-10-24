@@ -1,2 +1,4 @@
-//Define the article list.
-angular.module('articleList',['ngMaterial']);
+'use strict';
+
+// Define the `phoneList` module
+angular.module('articleList', ['ngMaterial','ngMessages','core.article']);

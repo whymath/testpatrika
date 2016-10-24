@@ -1,21 +1,14 @@
 'use strict';
 
+// Register `articleList` component, along with its associated controller and template
 angular.
-  module('newsletterApp').
-  component('articleList',{
-    templateUrl:'article-list/article-list.template.html',
-    controller: function ArticleListController() {
-      this.articles = [
-          {
-            name: 'Yohan',
-            snippet: 'Fast just got faster with Yohan.'
-          }, {
-            name: 'Sourajyoti',
-            snippet: 'The Next, Next Generation Sourajyoti.'
-          }, {
-            name: 'Sherlock',
-            snippet: 'The Next, Next Generation.'
-          }
-      ];
-    }
+  module('articleList').
+  component('articleList', {
+    templateUrl: 'article-list/article-list.template.html',
+    controller: ['Article',
+      function PhoneListController(Article) {
+        this.articles = Article.query();
+        this.orderProp = 'age';
+      }
+    ]
   });
