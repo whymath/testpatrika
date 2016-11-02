@@ -1,0 +1,15 @@
+<div layout="row">
+  <div flex="20">
+  </div>
+  <div flex="60">
+  <ul class="nav nav-pills nav-justified" ng-init="list.tab=1" style="border-bottom: 1px solid gray;">
+    <li ng-repeat="item in $ctrl.homeElements">
+      <a data-toggle="pills" href="#!/{{item.link}}">
+        {{item.name}}
+      </a>
+    </li>
+  </ul>
+  </div>
+  <div flex="20">
+  </div>
+</div>

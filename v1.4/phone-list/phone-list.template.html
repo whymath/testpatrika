@@ -1,0 +1,44 @@
+<div class="container-fluid" layout="row">
+  <div flex="5">
+  </div>
+  <div class="row" flex="90">
+      <!--Body content-->
+      <md-content class="md-padding" layout-xs="row" layout="row">
+        <ul style="list-style: none;">
+        <!-- <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+            class="thumbnail phone-list-item">
+          <a href="#!/phones/{{phone.id}}" class="thumb">
+            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+          </a>
+          <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li> -->
+        <div flex-xs flex-gt-xs="30" layout="row" layout-wrap>
+          <li ng-repeat="phone in $ctrl.phones">
+          <md-card>
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{phone.name}}</span>
+                <span class="md-subhead">{{phone.snippet}}</span>
+              </md-card-title-text>
+              <a href="#!/phones/{{phone.id}}">
+              <md-card-title-media>
+                <div class="md-media-lg card-media">
+                  <img ng-src="{{phone.imageUrl}}" class="md-card-image" alt="Washed Out">
+                </div>
+              </md-card-title-media>
+            </a>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
+              <md-button>Action 1</md-button>
+              <md-button>Action 2</md-button>
+            </md-card-actions>
+          </md-card>
+      </li>
+      </div>
+      </ul>
+  </md-content>
+  </div>
+  <div flex>
+  </div>
+</div>
