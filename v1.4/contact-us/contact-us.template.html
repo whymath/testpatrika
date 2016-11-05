@@ -1,0 +1,64 @@
+<div layout="row" layout-sm="column">
+  <div flex=10>
+  </div>
+<div flex ng-cloak="" class="md-inline-form inputdemoBasicUsage" >
+    <md-content layout="row" layout-sm="column" layout-padding="">
+      <!-- layout-gt-xs="row" layout-xs="column" -->
+      <div flex=75>
+        <h2>FeedBack, Queries</h2>
+        <md-content layout-padding="" layout="row">
+          <div>
+            <form name="userForm">
+              <div layout-gt-sm="column" layout="column">
+                <md-input-container class="md-block" flex-gt-sm="">
+                  <label>First name</label>
+                  <input name="firstName" ng-model="$ctrl.firstName" placeholder="Anonymous" required md-maxlength="40">
+
+                  <div ng-messages="userForm.firstName.$error" role="alert" multiple>
+                    <div ng-message="required">You can simply use "Anonymous"</div>
+                    <div ng-message="md-maxlength">Well you weren't given a chance at birth.<span>Sorry!</span></div>
+                  </div>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm="">
+                  <label>Last Name</label>
+                  <input ng-model="theMax">
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                  <label>Location</label>
+                  <md-select ng-model="$ctrl.state">
+                    <md-option ng-repeat="state in $ctrl.states" value="{{state.abbrev}}">
+                      {{state.abbrev}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+                <md-input-container class="md-block">
+                  <label>FeedBack</label>
+                  <textarea name="feedBack" ng-model="$ctrl.biography" placeholder="Comment.."
+                  md-maxlength="300" rows="8" md-select-on-focus="" required=""></textarea>
+                  <div ng-messages="userForm.feedBack.$error" role="alert" multiple>
+                    <div ng-message="required">You have it in you to write a small amount. It would make you feel better. Trust us!</div>
+                    <div ng-message="md-maxlength">Whoa! Not that much. We are not paid for it! Stop Blubbing!</div>
+                  </div>
+                </md-input-container>
+
+                <md-datepicker ng-model="$ctrl.submissionDate"></md-datepicker>
+
+                <md-button ng-disabled="$ctrl.biography == null" class="md-raised md-primary">Submit</md-button>
+              </div>
+            </form>
+          </div>
+        </md-content>
+      </div>
+      <!-- <div flex=5></div> -->
+      <div flex=25>
+        <h3>You can also Contact us at..</h3>
+      </div>
+      <hr/>
+    </md-content>
+  </div>
+  <div flex=10>
+  </div>
+</div>
