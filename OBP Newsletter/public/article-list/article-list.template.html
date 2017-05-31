@@ -1,0 +1,36 @@
+<div class="container-fluid" layout="row">
+  <div>
+    <div layout="column" layout-align="center" ng-style="{'width': '100%'}">
+      <div class='md-padding' layout="row" layout-align="center" flex-offset-sm="0"
+        flex-offset-md="0" flex-offset-lg="0" flex-offset-gt-lg="0" layout-wrap>
+        <md-card class="md-whiteframe-9dp" ng-style="{'width': '350px', 'border-radius': '6px'}"
+          ng-repeat="article in $ctrl.articles" layout-padding>
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{article.title}}</span>
+            </md-card-title-text>
+            <a href="#!/home/{{article._id}}">
+              <md-card-title-media>
+              <div class="md-media-lg card-media">
+
+              </div>
+              </md-card-title-media>
+            </a>
+          </md-card-title>
+          <md-card-actions layout="row" layout-align="center center">
+            <div layout="row" layout-align="center center">
+              <a href="#!/noaction">
+                <i class="material-icons md-18 md-dark">snooze</i>
+              </a>
+            </div>
+            <div layout="row" layout-align="center center">
+              <a href="#!/noaction">
+                <i class="material-icons md-18 md-dark">comment</i>
+              </a>
+            </div>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</div>
